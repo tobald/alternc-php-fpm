@@ -1,3 +1,16 @@
+alternc-php-fpm (3.4+0~dp1) buster; urgency=medium
+
+  [ Quenenni ]
+  * [enh] PHP 8.1 support
+
+  [ Camille Lafitte ]
+  * Enable travis feature
+
+  [ Christophe Siraut ]
+  * d/postinst: remove error in package name
+
+ -- Christophe Siraut <d@tobald.eu.org>  Wed, 30 Nov 2022 10:55:47 +0100
+
 alternc-php-fpm (3.4) oldstable; urgency=low
 
   * Add support for PHP7.4
