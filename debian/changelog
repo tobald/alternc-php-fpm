@@ -1,3 +1,10 @@
+alternc-php-fpm (3.4+0~dp2) buster; urgency=medium
+
+  [ Quenenni ]
+  * d/postinst: fix insert queries lacking 2 columns values
+
+ -- Christophe Siraut <d@tobald.eu.org>  Fri, 09 Dec 2022 09:56:43 +0100
+
 alternc-php-fpm (3.4+0~dp1) buster; urgency=medium
 
   [ Quenenni ]
