@@ -1,3 +1,10 @@
+alternc-php-fpm (3.4+0~dp3) buster; urgency=medium
+
+  * php7-fpm: convert account_root and mail_account variables
+  * d/postinst: disable outdated php versions
+
+ -- Christophe Siraut <d@tobald.eu.org>  Tue, 20 Dec 2022 15:23:27 +0100
+
 alternc-php-fpm (3.4+0~dp2) buster; urgency=medium
 
   [ Quenenni ]
