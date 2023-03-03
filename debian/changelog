@@ -1,3 +1,10 @@
+alternc-php-fpm (3.4+0~dp4) buster; urgency=medium
+
+  * templates: fix rewrite rule for php https 8.0 and 8.1
+  * d/postinst: update compatibility list for txt
+
+ -- Christophe Siraut <d@tobald.eu.org>  Fri, 03 Mar 2023 10:52:50 +0100
+
 alternc-php-fpm (3.4+0~dp3) buster; urgency=medium
 
   * php7-fpm: convert account_root and mail_account variables
