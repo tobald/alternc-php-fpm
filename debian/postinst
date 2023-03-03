@@ -32,6 +32,7 @@ INSERT IGNORE INTO domaines_type SET name='php81-fpm', description='PHP 8.1 FPM'
 UPDATE sub_domaines SET web_action='UPDATE' WHERE type IN ('php56-fpm','php70-fpm','php71-fpm','php72-fpm','php73-fpm','php74-fpm','php80-fpm','php81-fpm');
 UPDATE domaines_type SET enable='NONE' WHERE name IN ('php56-fpm','php70-fpm','php71-fpm');
 UPDATE domaines_type SET enable='ADMIN' WHERE name IN ('php72-fpm','php73-fpm','php80-fpm');
+UPDATE domaines_type SET compatibility='vhost,url,ip,ipv6,txt,mx,mx2,defmx,defmx2,php73-fpm,php74-fpm,php80-fpm,php81-fpm' where name='txt';
 "
 	echo "Overriding php fpm configuration..."
 	/usr/lib/alternc/php7-fpm force
