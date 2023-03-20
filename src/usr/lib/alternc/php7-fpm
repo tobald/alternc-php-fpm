@@ -12,6 +12,9 @@ passthru("/usr/lib/alternc/install.d/alternc-nss end");
 
 $force = (isset($argv[1]) && $argv[1]=="force");
 
+if (getenv("DEBUG") !== false ) $verbose = true;
+else $verbose = false;
+
 $db->query("SELECT DISTINCT m.login,m.uid,sd.type FROM sub_domaines sd, membres m WHERE m.uid=sd.compte AND sd.type IN ('php56-fpm','php70-fpm','php71-fpm','php72-fpm','php73-fpm','php74-fpm','php80-fpm','php81-fpm');");
 
 $reload=array();
@@ -27,6 +30,8 @@ foreach($allversions as $k=>$version) {
 
 
 function myecho($str) {
+     global $verbose;
+	 if (!$verbose) return;
 	 static $first=true;
 	 if ($first) {
 	    echo date("Y-m-d H:i:s")." Log of php7-fpm\n";
@@ -70,6 +75,7 @@ foreach($allversions as $version) {
 
 // now reloads php fpm versions
 foreach($reload as $service) {
-    passthru("/etc/init.d/php".$service."-fpm reload");  
+    exec("/etc/init.d/php".$service."-fpm reload", $output, $rc);
+    if ($rc != 0) echo implode("\n", $output);
 }
 
