@@ -1,3 +1,9 @@
+alternc-php-fpm (3.4+0~dp5) buster; urgency=medium
+
+  * php7-fpm: silent reloads
+
+ -- Christophe Siraut <d@tobald.eu.org>  Fri, 07 Apr 2023 14:34:01 +0200
+
 alternc-php-fpm (3.4+0~dp4) buster; urgency=medium
 
   * templates: fix rewrite rule for php https 8.0 and 8.1
